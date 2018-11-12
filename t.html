@@ -1,0 +1,104 @@
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.AttributeError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.12: /usr/bin/python<br>Mon Nov 12 14:09:30 2018</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///var/www/pbrooks/fall2018/pages.py">/var/www/pbrooks/fall2018/pages.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;481</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;482</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;483</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;484</small>&nbsp;Main()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;485</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>Main</strong>&nbsp;= &lt;function Main&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///var/www/pbrooks/fall2018/pages.py">/var/www/pbrooks/fall2018/pages.py</a> in <strong>Main</strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;53</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;54</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;topage=form['page'].value<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;55</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PageDispatcher(topage,form)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;56</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;57</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>PageDispatcher</strong>&nbsp;= &lt;function PageDispatcher&gt;, <strong>topage</strong>&nbsp;= 'store_homework', <strong>form</strong>&nbsp;= FieldStorage(None, None, [MiniFieldStorage('clas...ieldStorage('Submit', 'Submit this assignment')])</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///var/www/pbrooks/fall2018/pages.py">/var/www/pbrooks/fall2018/pages.py</a> in <strong>PageDispatcher</strong>(topage='store_homework', form=FieldStorage(None, None, [MiniFieldStorage('clas...ieldStorage('Submit', 'Submit this assignment')]))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;69</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;AskStoreHomework(form)<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;70</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;topage=='store_homework':<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;71</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;StoreHomework(form)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;72</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;topage=='view_homework':<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;73</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;StudentLogin('View&nbsp;submitted&nbsp;assignments','homework_view','homework_view2')<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>StoreHomework</strong>&nbsp;= &lt;function StoreHomework&gt;, <strong>form</strong>&nbsp;= FieldStorage(None, None, [MiniFieldStorage('clas...ieldStorage('Submit', 'Submit this assignment')])</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///var/www/pbrooks/fall2018/pages.py">/var/www/pbrooks/fall2018/pages.py</a> in <strong>StoreHomework</strong>(form=FieldStorage(None, None, [MiniFieldStorage('clas...ieldStorage('Submit', 'Submit this assignment')]))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;197</small>&nbsp;#&nbsp;--------------------------------&nbsp;StoreHomework&nbsp;-----------------------<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;198</small>&nbsp;def&nbsp;StoreHomework(form):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;199</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;errmsg,filename,filecontents=fileupload(form,'filecontents')<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;200</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;errmsg!='':<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;201</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ResultsPage('student',errmsg,'red')<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">errmsg <em>undefined</em>, filename <em>undefined</em>, filecontents <em>undefined</em>, <em>global</em> <strong>fileupload</strong>&nbsp;= &lt;function fileupload&gt;, <strong>form</strong>&nbsp;= FieldStorage(None, None, [MiniFieldStorage('clas...ieldStorage('Submit', 'Submit this assignment')])</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/local/www/bert/pbrooks/fall2018/util1.py">/usr/local/www/bert/pbrooks/fall2018/util1.py</a> in <strong>fileupload</strong>(cgiform=FieldStorage(None, None, [MiniFieldStorage('clas...ieldStorage('Submit', 'Submit this assignment')]), browse_button_name='filecontents')</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;124</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;'No&nbsp;such&nbsp;file&nbsp;button&nbsp;name','',''<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;125</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;=&nbsp;cgiform[browse_button_name]<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;126</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;not&nbsp;f.file:<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;127</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;'Unable&nbsp;to&nbsp;open&nbsp;file:&nbsp;%s'&nbsp;%&nbsp;f.filename,'',''<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;128</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;'',f.filename,&nbsp;f.file.read()<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>f</strong>&nbsp;= [MiniFieldStorage('filecontents', 'XuFubCYfjtyPkkDJOw;CHAN, NICHOLAS \n'), MiniFieldStorage('filecontents', 'vuCtPJotPQjumkgtaP;CHEN, DENNIS\n'), MiniFieldStorage('filecontents', 'EuqtKtfPLMTMpwaMit;CHEN, JIAYANG\n'), MiniFieldStorage('filecontents', 'CuvuJPzwEuTQItwPrP;CHONG, BRANDON\n'), MiniFieldStorage('filecontents', 'tuiuakLCIJKksQstwu;DIEP, CIARAN\n'), MiniFieldStorage('filecontents', 'BuiuXkAMUtgMZCUJQu;FOLEY, MARYANN\n'), MiniFieldStorage('filecontents', 'vufwiwNMFkZCyJZMet;GALAKHOV, IVAN\n'), MiniFieldStorage('filecontents', 'rubCYkCJYQCupuUCUk;GRIFFIN, AIDAN\n'), MiniFieldStorage('filecontents', 'duItiJWfVCXPzPWQPk;GRODESKY, JUDE\n'), MiniFieldStorage('filecontents', 'uuCtztWPYJZCxtCCmJ;GULSEN, ELA\n'), MiniFieldStorage('filecontents', 'nurtKJQuOMguSwNwqk;HUANG, JAMES\n'), MiniFieldStorage('filecontents', 'JuytLtWPfQFfAfCfJQ;IMRAN, AHMED\n'), MiniFieldStorage('filecontents', 'auKuVCLkmJzCVfRCDP;JIANG, YING XIN\n'), MiniFieldStorage('filecontents', 'UuBtwtFJIPiwatKwZt;JON, ISAAC\n'), MiniFieldStorage('filecontents', 'ZucuBQPtoCJJuQMJSf;KIM, JASON\n'), MiniFieldStorage('filecontents', 'LuetgtsfFCKCeJyPRQ;LEE, THOMAS\n'), MiniFieldStorage('filecontents', 'TuICSCckhumMjMmfWC;LEE, WOOSUK\n'), MiniFieldStorage('filecontents', 'FuatztqCsuhJqtHMBt;LI, BING\n'), MiniFieldStorage('filecontents', 'nuHtQJiJuMkfzkquef;LI, Kenny\n'), MiniFieldStorage('filecontents', 'fuNwGQSMXkytxMytJJ;LIU, Steven\n'), ...], f.file <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.AttributeError'&gt;</strong>: 'list' object has no attribute 'file'
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+("'list' object has no attribute 'file'",)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+"'list' object has no attribute 'file'"
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/var/www/pbrooks/fall2018/pages.py", line 484, in &lt;module&gt;
+    Main()
+  File "/var/www/pbrooks/fall2018/pages.py", line 55, in Main
+    PageDispatcher(topage,form)
+  File "/var/www/pbrooks/fall2018/pages.py", line 71, in PageDispatcher
+    print StoreHomework(form)
+  File "/var/www/pbrooks/fall2018/pages.py", line 199, in StoreHomework
+    errmsg,filename,filecontents=fileupload(form,'filecontents')
+  File "/usr/local/www/bert/pbrooks/fall2018/util1.py", line 126, in fileupload
+    if not f.file:
+AttributeError: 'list' object has no attribute 'file'
+
+-->
+
+
