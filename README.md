@@ -1,6 +1,6 @@
 # ProgramTester
 A script for using Mr Brooks' site through the command line
-#Usage:
+# Usage:
     python ProgramTester.py -hw [-v -f] 
         Displays list of homework assignments.
         Extra Options:
