@@ -8,6 +8,7 @@ global accountData
 accountData = {}
 #>([_A-Za-z]+),\x20([_A-Za-z]+)</option>
 def submitHW(filename, teacherComment=""):
+    """ Submits the homework file. """
     f = open(filename, "rb")
     url = "http://bert.stuy.edu/pbrooks/fall2018/pages.py"
     data = {
@@ -37,6 +38,7 @@ def submitHW(filename, teacherComment=""):
     r = requests.post(url, files=files, data=data, allow_redirects=True)    
     
 def viewHWSoup(submit=False):
+    """ Returns the soup of the 'view homework' page."""
     url = "http://bert.stuy.edu/pbrooks/fall2018/pages.py"
     page = "homework_view2" if not submit else "submit_homework2"
     data = {
@@ -58,6 +60,7 @@ def clear():
         _ = system('clear')
       
 def setupAccount():
+    """ Creates the initial user account. """
     lines = open("classData.txt").readlines()
     count = 1
     fData = {}
@@ -85,7 +88,7 @@ def setupAccount():
     clear()
     
 def viewData(verbose=False):
-
+    """ Deals with pulling data from the view homework page. """
     soup = viewHWSoup()
     tables = soup.findAll("table")
     tables.pop(0)
@@ -105,6 +108,7 @@ def viewData(verbose=False):
         print "-" * 20
  #   x
 def viewTests(opt="all"):
+    """ Views homework tests. """
     soup = viewHWSoup()
     tables = soup.findAll("table")
     table = tables.pop(1)    
@@ -140,13 +144,11 @@ def viewTests(opt="all"):
                 print data[1][i], " : ", data[2][i]
     
 def loadData():
+    """ Loads user data. """
     lines = open("account.txt").readlines()
     for line in lines:
         l = line.strip().split(":")
         accountData[l[0]] = l[1]
-        
-    
-
 def main():
     if not path.exists("account.txt"):
         setupAccount()
@@ -197,7 +199,5 @@ def main():
         elif args.filename:
             comment = args.comment if args.comment else ""
             submitHW(args.filename, teacherComment=comment)
-
-
 if __name__ == "__main__":
     main()
